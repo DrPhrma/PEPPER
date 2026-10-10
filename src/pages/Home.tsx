@@ -3,57 +3,60 @@ import { ArrowRight, Shield, Zap, Eye } from 'lucide-react'
 
 export default function Home() {
   return (
-    <div className="max-w-6xl mx-auto px-6">
+    <div className="max-w-5xl mx-auto px-5">
       {/* Hero */}
-      <section className="pt-20 pb-24">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-white leading-tight">
-            Open source intelligence tools.<br />
-            <span className="text-muted">Built for clarity.</span>
-          </h1>
-          <p className="mt-6 text-lg text-muted leading-relaxed">
-            A clean collection of client-side OSINT utilities and curated free resources.
-            No accounts. No tracking. Everything stays in your browser.
+      <section className="pt-24 pb-20">
+        <div className="max-w-xl">
+          <p className="text-[13px] font-medium text-muted mb-4 tracking-wide uppercase">
+            Open Source Intelligence
           </p>
-          <div className="mt-10 flex items-center gap-4">
+          <h1 className="text-[40px] sm:text-[48px] font-semibold tracking-tight text-white leading-[1.1]">
+            Tools that stay<br />
+            <span className="text-muted-2">in your browser.</span>
+          </h1>
+          <p className="mt-5 text-[15px] text-muted leading-relaxed max-w-md">
+            A focused collection of client-side OSINT utilities and curated free resources.
+            No accounts. No tracking. No API keys.
+          </p>
+          <div className="mt-8">
             <Link
               to="/tools"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-black text-sm font-medium rounded-md hover:bg-white/90 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-white text-black text-[13px] font-medium rounded-lg hover:bg-white/90 transition-colors"
             >
-              Browse Tools
-              <ArrowRight className="w-4 h-4" />
+              Browse all tools
+              <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
         </div>
       </section>
 
       {/* Features */}
-      <section className="pb-24 grid sm:grid-cols-3 gap-6">
-        <div className="p-6 rounded-xl border border-border bg-surface">
-          <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center mb-4">
-            <Shield className="w-5 h-5 text-white" />
+      <section className="pb-24 grid sm:grid-cols-3 gap-3">
+        <div className="p-5 rounded-xl border border-border bg-surface">
+          <div className="w-8 h-8 rounded-lg bg-white/[0.04] flex items-center justify-center mb-3">
+            <Shield className="w-4 h-4 text-white" strokeWidth={1.75} />
           </div>
-          <h3 className="font-medium text-white mb-2">Privacy first</h3>
-          <p className="text-sm text-muted leading-relaxed">
-            Pure client-side tools process everything locally. Your data never leaves the browser.
+          <h3 className="text-[14px] font-medium text-white mb-1.5">Privacy first</h3>
+          <p className="text-[13px] text-muted leading-relaxed">
+            Pure client-side tools. Your data never leaves the browser.
           </p>
         </div>
-        <div className="p-6 rounded-xl border border-border bg-surface">
-          <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center mb-4">
-            <Zap className="w-5 h-5 text-white" />
+        <div className="p-5 rounded-xl border border-border bg-surface">
+          <div className="w-8 h-8 rounded-lg bg-white/[0.04] flex items-center justify-center mb-3">
+            <Zap className="w-4 h-4 text-white" strokeWidth={1.75} />
           </div>
-          <h3 className="font-medium text-white mb-2">No API keys</h3>
-          <p className="text-sm text-muted leading-relaxed">
-            Designed to run on static hosting. No secrets, no backend, no rate-limit surprises.
+          <h3 className="text-[14px] font-medium text-white mb-1.5">Zero keys</h3>
+          <p className="text-[13px] text-muted leading-relaxed">
+            Designed for static hosting. No secrets, no backend required.
           </p>
         </div>
-        <div className="p-6 rounded-xl border border-border bg-surface">
-          <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center mb-4">
-            <Eye className="w-5 h-5 text-white" />
+        <div className="p-5 rounded-xl border border-border bg-surface">
+          <div className="w-8 h-8 rounded-lg bg-white/[0.04] flex items-center justify-center mb-3">
+            <Eye className="w-4 h-4 text-white" strokeWidth={1.75} />
           </div>
-          <h3 className="font-medium text-white mb-2">Clean & focused</h3>
-          <p className="text-sm text-muted leading-relaxed">
-            Every tool has its own page. Results are structured and easy to copy.
+          <h3 className="text-[14px] font-medium text-white mb-1.5">Focused</h3>
+          <p className="text-[13px] text-muted leading-relaxed">
+            Every tool has its own page. Results are clean and copyable.
           </p>
         </div>
       </section>

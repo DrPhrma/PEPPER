@@ -7,16 +7,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#0A0A0A",
-        surface: "#111111",
-        "surface-hover": "#161616",
-        border: "#222222",
-        muted: "#A1A1A1",
-        accent: "#E5E5E5",
+        background: "#09090b",
+        surface: "#0f0f11",
+        "surface-2": "#151517",
+        "surface-hover": "#1a1a1d",
+        border: "#1f1f23",
+        "border-hover": "#2a2a2e",
+        muted: "#71717a",
+        "muted-2": "#a1a1aa",
+        accent: "#fafafa",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+        sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+        mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
+      },
+      borderRadius: {
+        xl: "12px",
+        "2xl": "16px",
       },
     },
   },
