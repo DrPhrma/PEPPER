@@ -14,8 +14,8 @@ export interface Tool {
   description: string
   category: ToolCategory
   type: 'client' | 'link'
-  path?: string          // for client tools
-  externalUrl?: string   // for link-out tools
+  path?: string
+  externalUrl?: string
 }
 
 export const tools: Tool[] = [
@@ -36,22 +36,54 @@ export const tools: Tool[] = [
     type: 'client',
     path: '/tools/dork-generator',
   },
+  {
+    id: 'regex',
+    name: 'Regex Tester',
+    description: 'Test regular expressions against sample text in real time.',
+    category: 'Text & Extraction',
+    type: 'client',
+    path: '/tools/regex',
+  },
+  {
+    id: 'diff',
+    name: 'Diff Checker',
+    description: 'Compare two texts line by line and highlight changes.',
+    category: 'Text & Extraction',
+    type: 'client',
+    path: '/tools/diff',
+  },
+  {
+    id: 'word-counter',
+    name: 'Word Counter',
+    description: 'Count words, characters, lines, sentences and paragraphs.',
+    category: 'Text & Extraction',
+    type: 'client',
+    path: '/tools/word-counter',
+  },
 
   // Image Forensics
   {
     id: 'exif',
     name: 'Image EXIF Viewer',
-    description: 'Upload an image to extract metadata, GPS coordinates, camera info and timestamps.',
+    description: 'Upload an image to extract metadata, dimensions and file info.',
     category: 'Image Forensics',
     type: 'client',
     path: '/tools/exif',
+  },
+  {
+    id: 'qr',
+    name: 'QR Code Generator',
+    description: 'Generate a QR code from any text or URL.',
+    category: 'Image Forensics',
+    type: 'client',
+    path: '/tools/qr',
   },
 
   // Hashes & Encoding
   {
     id: 'hash',
     name: 'Hash Generator',
-    description: 'Generate MD5, SHA-1, SHA-256 and SHA-512 hashes of text or files.',
+    description: 'Generate SHA-1, SHA-256 and SHA-512 hashes of text.',
     category: 'Hashes & Encoding',
     type: 'client',
     path: '/tools/hash',
@@ -72,6 +104,14 @@ export const tools: Tool[] = [
     type: 'client',
     path: '/tools/jwt',
   },
+  {
+    id: 'case',
+    name: 'Case Converter',
+    description: 'Convert between camelCase, snake_case, kebab-case, PascalCase and more.',
+    category: 'Hashes & Encoding',
+    type: 'client',
+    path: '/tools/case',
+  },
 
   // Domain & Network
   {
@@ -91,12 +131,12 @@ export const tools: Tool[] = [
     path: '/tools/crtsh',
   },
   {
-    id: 'rdap',
-    name: 'RDAP / WHOIS',
-    description: 'Lookup domain registration data using public RDAP servers.',
+    id: 'url-parser',
+    name: 'URL Parser',
+    description: 'Break a URL into protocol, host, path, query params and hash.',
     category: 'Domain & Network',
     type: 'client',
-    path: '/tools/rdap',
+    path: '/tools/url-parser',
   },
   {
     id: 'wayback',
@@ -108,14 +148,6 @@ export const tools: Tool[] = [
   },
 
   // IP & Hosting
-  {
-    id: 'ip-info',
-    name: 'IP Info',
-    description: 'Geolocation, ASN and basic hosting information for any IP address.',
-    category: 'IP & Hosting',
-    type: 'client',
-    path: '/tools/ip-info',
-  },
   {
     id: 'shodan',
     name: 'Shodan',
@@ -145,7 +177,7 @@ export const tools: Tool[] = [
   {
     id: 'username-links',
     name: 'Username Links',
-    description: 'Generate direct profile links across 100+ platforms.',
+    description: 'Generate direct profile links across 30+ platforms.',
     category: 'Identity & Username',
     type: 'client',
     path: '/tools/username-links',
@@ -167,7 +199,7 @@ export const tools: Tool[] = [
     externalUrl: 'https://haveibeenpwned.com/',
   },
 
-  // Threat Intel (mostly link-outs)
+  // Threat Intel
   {
     id: 'virustotal',
     name: 'VirusTotal',
@@ -201,6 +233,22 @@ export const tools: Tool[] = [
     category: 'Utilities',
     type: 'client',
     path: '/tools/timestamp',
+  },
+  {
+    id: 'json',
+    name: 'JSON Formatter',
+    description: 'Validate, pretty-print and minify JSON.',
+    category: 'Utilities',
+    type: 'client',
+    path: '/tools/json',
+  },
+  {
+    id: 'uuid',
+    name: 'UUID Generator',
+    description: 'Generate version 4 UUIDs locally.',
+    category: 'Utilities',
+    type: 'client',
+    path: '/tools/uuid',
   },
 ]
 
