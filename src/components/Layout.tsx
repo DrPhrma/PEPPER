@@ -15,10 +15,10 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <div className="min-h-screen bg-background flex flex-col relative">
-      <header className="sticky top-0 z-50 border-b border-border/80 bg-background/70 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-border/60 bg-background/60 backdrop-blur-xl">
         <div className="max-w-5xl mx-auto px-5 h-[52px] flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-white/15 to-white/5 border border-white/10 flex items-center justify-center group-hover:from-white/20 group-hover:to-white/8 transition-all">
+            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-white/15 to-white/5 border border-white/10 flex items-center justify-center group-hover:from-white/25 group-hover:to-white/10 transition-all shadow-[0_0_12px_rgba(255,255,255,0.05)]">
               <Search className="w-3.5 h-3.5 text-white" strokeWidth={2.5} />
             </div>
             <span className="text-[15px] font-semibold text-white tracking-tight">PEPPER</span>
@@ -53,10 +53,10 @@ export default function Layout({ children }: LayoutProps) {
         {children}
       </main>
 
-      <footer className="border-t border-border/80 py-7 mt-auto">
+      <footer className="border-t border-border/60 py-7 mt-auto">
         <div className="max-w-5xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px] text-muted">
-          <p>Built for research & education. Use responsibly.</p>
-          <p className="text-muted/70">Client-side · No tracking · No accounts</p>
+          <p>For research and education. Use responsibly.</p>
+          <p className="text-muted/60">PEPPER</p>
         </div>
       </footer>
     </div>
