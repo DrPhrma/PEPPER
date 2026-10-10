@@ -54,23 +54,30 @@ export default function Layout({ children }: LayoutProps) {
       </main>
 
       <footer className="border-t border-border/60 py-7 mt-auto">
-        <div className="max-w-5xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[12px] text-muted">For research and education. Use responsibly.</p>
+        <div className="max-w-5xl mx-auto px-5 flex flex-col gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-[12px] text-muted">For research and education. Use responsibly.</p>
 
-          <div className="flex items-center gap-3">
-            <span className="text-[12px] text-muted">
-              Made by <span className="text-white font-medium">Aadi</span>
-            </span>
-            <a
-              href="https://github.com/DrPhrma"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-border bg-surface text-[12px] text-muted hover:text-white hover:border-border-hover hover:bg-surface-hover transition-all"
-            >
-              <Github className="w-3.5 h-3.5" />
-              GitHub
-            </a>
+            <div className="flex items-center gap-3">
+              <span className="text-[12px] text-muted">
+                Made by <span className="text-white font-medium">Aadi</span>
+              </span>
+              <a
+                href="https://github.com/DrPhrma"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-border bg-surface text-[12px] text-muted hover:text-white hover:border-border-hover hover:bg-surface-hover transition-all"
+              >
+                <Github className="w-3.5 h-3.5" />
+                GitHub
+              </a>
+            </div>
           </div>
+          <p className="text-[11px] text-muted/50 text-center sm:text-left">
+            <span className="text-muted/80 font-medium">PEPPER</span>
+            {' — '}
+            Platform for Extended Public Profile & Entity Research
+          </p>
         </div>
       </footer>
     </div>
