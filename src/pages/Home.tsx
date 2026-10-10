@@ -11,15 +11,19 @@ const featured = [
 export default function Home() {
   return (
     <div className="relative overflow-hidden">
-      {/* Background layers */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear-gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:64px_64px] opacity-[0.35] pointer-events-none" />
       <div className="absolute inset-x-0 top-0 h-[560px] bg-radial-fade pointer-events-none" />
       <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-white/[0.03] blur-[100px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-5 relative">
-        {/* Hero */}
         <section className="pt-32 pb-20">
           <div className="max-w-2xl">
+            <p className="text-[12px] font-medium text-muted tracking-wide mb-4">
+              <span className="text-white">PEPPER</span>
+              <span className="text-muted/50 mx-2">·</span>
+              Platform for Extended Public Profile & Entity Research
+            </p>
+
             <h1 className="text-[48px] sm:text-[60px] font-semibold tracking-tight text-white leading-[1.02]">
               Intelligence tools.
               <br />
@@ -48,7 +52,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Stats strip */}
           <div className="mt-16 grid grid-cols-3 gap-px bg-border/60 rounded-xl overflow-hidden border border-border max-w-lg">
             {[
               { value: '20+', label: 'Tools' },
@@ -63,7 +66,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Featured */}
         <section className="pb-16">
           <div className="flex items-center justify-between mb-5">
             <h2 className="text-[13px] font-medium text-muted uppercase tracking-wider">Featured</h2>
@@ -91,7 +93,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Principles */}
         <section className="pb-24">
           <div className="grid sm:grid-cols-3 gap-2.5">
             {[
