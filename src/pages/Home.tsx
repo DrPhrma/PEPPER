@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Shield, Zap, Eye, Fingerprint, Hash, FileSearch, Link2 } from 'lucide-react'
+import { ArrowRight, Shield, Zap, Eye, Fingerprint, Hash, FileSearch, Link2, Github } from 'lucide-react'
 
 const featured = [
   { name: 'Entity Extractor', desc: 'Pull IOCs from any text', path: '/tools/entity-extractor', icon: FileSearch },
@@ -43,12 +43,15 @@ export default function Home() {
                 Open toolkit
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
-              <Link
-                to="/tools"
+              <a
+                href="https://github.com/DrPhrma"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 text-[13px] text-muted hover:text-white border border-border rounded-xl hover:border-border-hover hover:bg-white/[0.03] transition-all"
               >
-                Browse tools
-              </Link>
+                <Github className="w-3.5 h-3.5" />
+                GitHub
+              </a>
             </div>
           </div>
 
