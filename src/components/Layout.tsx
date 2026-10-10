@@ -14,22 +14,22 @@ export default function Layout({ children }: LayoutProps) {
   }
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
-      <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
-        <div className="max-w-5xl mx-auto px-5 h-13 flex items-center justify-between" style={{ height: '52px' }}>
+    <div className="min-h-screen bg-background flex flex-col relative">
+      <header className="sticky top-0 z-50 border-b border-border/80 bg-background/70 backdrop-blur-xl">
+        <div className="max-w-5xl mx-auto px-5 h-[52px] flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="w-6 h-6 rounded-md bg-white/[0.08] flex items-center justify-center group-hover:bg-white/[0.12] transition-colors">
+            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-white/15 to-white/5 border border-white/10 flex items-center justify-center group-hover:from-white/20 group-hover:to-white/8 transition-all">
               <Search className="w-3.5 h-3.5 text-white" strokeWidth={2.5} />
             </div>
             <span className="text-[15px] font-semibold text-white tracking-tight">PEPPER</span>
           </Link>
 
-          <nav className="flex items-center gap-0.5">
+          <nav className="flex items-center gap-1">
             <Link
               to="/"
-              className={`px-3 py-1.5 text-[13px] rounded-md transition-colors ${
+              className={`px-3.5 py-1.5 text-[13px] rounded-lg transition-all ${
                 isActive('/') && location.pathname === '/'
-                  ? 'text-white bg-white/[0.08]'
+                  ? 'text-white bg-white/[0.08] border border-white/[0.06]'
                   : 'text-muted hover:text-white hover:bg-white/[0.04]'
               }`}
             >
@@ -37,9 +37,9 @@ export default function Layout({ children }: LayoutProps) {
             </Link>
             <Link
               to="/tools"
-              className={`px-3 py-1.5 text-[13px] rounded-md transition-colors ${
+              className={`px-3.5 py-1.5 text-[13px] rounded-lg transition-all ${
                 isActive('/tools')
-                  ? 'text-white bg-white/[0.08]'
+                  ? 'text-white bg-white/[0.08] border border-white/[0.06]'
                   : 'text-muted hover:text-white hover:bg-white/[0.04]'
               }`}
             >
@@ -49,14 +49,14 @@ export default function Layout({ children }: LayoutProps) {
         </div>
       </header>
 
-      <main className="flex-1">
+      <main className="flex-1 relative">
         {children}
       </main>
 
-      <footer className="border-t border-border py-6 mt-auto">
+      <footer className="border-t border-border/80 py-7 mt-auto">
         <div className="max-w-5xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px] text-muted">
-          <p>For research & education only. Use responsibly.</p>
-          <p>Client-side · No tracking · No accounts</p>
+          <p>Built for research & education. Use responsibly.</p>
+          <p className="text-muted/70">Client-side · No tracking · No accounts</p>
         </div>
       </footer>
     </div>
