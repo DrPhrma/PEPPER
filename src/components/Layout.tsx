@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Search } from 'lucide-react'
+import { Search, Github } from 'lucide-react'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -54,9 +54,23 @@ export default function Layout({ children }: LayoutProps) {
       </main>
 
       <footer className="border-t border-border/60 py-7 mt-auto">
-        <div className="max-w-5xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px] text-muted">
-          <p>For research and education. Use responsibly.</p>
-          <p className="text-muted/60">PEPPER</p>
+        <div className="max-w-5xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-[12px] text-muted">For research and education. Use responsibly.</p>
+
+          <div className="flex items-center gap-3">
+            <span className="text-[12px] text-muted">
+              Made by <span className="text-white font-medium">Aadi</span>
+            </span>
+            <a
+              href="https://github.com/DrPhrma"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-border bg-surface text-[12px] text-muted hover:text-white hover:border-border-hover hover:bg-surface-hover transition-all"
+            >
+              <Github className="w-3.5 h-3.5" />
+              GitHub
+            </a>
+          </div>
         </div>
       </footer>
     </div>
